@@ -1,15 +1,12 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import "react-toastify/dist/ReactToastify.css";
-import Header from "./common/Header";
-import HomePage from "./home/HomePage";
+import Cards from "./cards/Cards";
 
 function App() {
   return (
     <div className="container-fluid">
-      <Header/>
       <Switch>
-        <Route exact path="/" component={HomePage} />
+        <Route exact path="/" component={Cards} />
       </Switch>
     </div>
   );
