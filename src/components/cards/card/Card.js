@@ -5,9 +5,13 @@ import './Card.scss';
 const Card = ({ title, body, image }) => {
   return (
     <div className="card">
-      <img className="image" src={`src/assets/${image}`} />
-      {/* <h2>{title}</h2> */}
-      {/* <p>{body}</p> */}
+      <div className="column">
+        <img className="image" src={`src/assets/${image}`} />
+        <span className="text">
+          <h2>{title}</h2>
+          <p>{body}</p>
+        </span>
+      </div>
     </div>
   );
 };

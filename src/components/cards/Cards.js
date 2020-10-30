@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from './card/Card';
 import './Cards.scss';
 import { cards } from '../../tools/mockDB.json';
 
 const Cards = () => {
+  const [card, setCard] = useState(cards[0]);
+
+  const { _id, title, body, image } = card;
+
   return (
     <div className="container">
-      {cards.map(({ _id, title, body, image }) => (
-        <Card key={_id} title={title} body={body} image={image}/>
-      ))}
+      <Card key={_id} title={title} body={body} image={image}/>
     </div>
   )
 };
