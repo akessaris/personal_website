@@ -55,7 +55,13 @@ module.exports = {
         use: ["babel-loader", "eslint-loader"]
       },
       {
-        test: /(\.css)$/,
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader',
+        ],
+      },
+      {
+        test: /\.s?[ac]ss$/i,
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -70,7 +76,8 @@ module.exports = {
               plugins: () => [require("cssnano")],
               sourceMap: true
             }
-          }
+          },
+          'sass-loader'
         ]
       }
     ]
