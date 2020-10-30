@@ -3,8 +3,23 @@
   display: inline-flex;
   gap: 5%;
 
-  .card {
+  .card-column {
     flex: 1;
+    height: 70vh;
+  }
+
+  .card {
+    border: 5px red solid;
+    border-radius: 2%;
+  }
+
+  .subheader {
+    margin: 2% 0 2% 5%;
+    font-size: x-large;
+
+    .name {
+      font-weight: bold;
+    }
   }
 
   .text {
@@ -14,8 +29,7 @@
   .image {
     width: 100%;
     height: 100%;
-    border: 5px red solid;
-    border-radius: 2%;
+    object-fit: contain;
   }
 
   .icon-container {
