@@ -1,4 +1,59 @@
+// Variables
+$icon-size: 95px;
+$icon-background-color: rgb(214, 214, 214);
+
 .container {
   display: flex;
   align-self: center;
+  gap: 5%;
+
+  .text {
+    flex: 1;
+  }
+
+  .card-column {
+    flex: 1.5;
+  }
+
+  .card {
+    border: 15px red solid;
+    border-radius: 4%;
+  }
+
+  .subheader {
+    margin: 2% 0 2% 5%;
+    font-size: x-large;
+
+    .name {
+      font-weight: bold;
+    }
+  }
+
+  .icon-container {
+    text-align: center;
+  }
+
+  .icon {
+    &:hover {
+      background-color: $icon-background-color;
+      transition: 0.5s;
+    }
+
+    cursor: pointer;
+    display: inline;
+    width: $icon-size;
+    height: $icon-size;
+    margin-top: 5%;
+    border: 10px $icon-background-color solid;
+    border-radius: 100%;
+    padding: 10px;
+
+    &.clear {
+      margin-right: 50px;
+      color: red;
+    }
+    &.heart {
+      color: rgb(100, 128, 0);
+    }
+  }
 }
